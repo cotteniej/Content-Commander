@@ -86,6 +86,11 @@ program
     }
   });
 
+program
+  .command('list')
+  .description('List all content ideas')
+  .action(require('./src/commands/list'));
+
 // Parse arguments
 program.parse(process.argv);
 
