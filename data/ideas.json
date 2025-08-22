@@ -5,5 +5,19 @@
     "description": "all of the programs I've bought and need to use",
     "type": "Other",
     "createdAt": "2025-08-21T15:16:13.310Z"
+  },
+  {
+    "id": "1755875845157",
+    "title": "Podcast notes - Mohnish Pabrai",
+    "description": "He says the way to go is to \"clone\". So cloning brewery site is good",
+    "type": "Blog Post",
+    "createdAt": "2025-08-22T15:17:25.157Z"
+  },
+  {
+    "id": "1755876682620",
+    "title": "Podcast - Mohnish Pabrai",
+    "description": "Anything good to clone for wakesurfing? MadLab BJJ?",
+    "type": "Blog Post",
+    "createdAt": "2025-08-22T15:31:22.620Z"
   }
 ]

@@ -1,23 +1,35 @@
 const fs = require('fs-extra');
 const path = require('path');
 
-const dataPath = path.join(process.cwd(), 'data', 'ideas.json');
+const dataDir = path.join(process.cwd(), 'data');
+const ideasPath = path.join(dataDir, 'ideas.json');
 
 async function getIdeas() {
-  await fs.ensureDir(path.dirname(dataPath));
-
-  if (await fs.pathExists(dataPath)) {
-    const txt = await fs.readFile(dataPath, 'utf8');
-    if (txt.trim()) {
-      try {
-        const ideas = JSON.parse(txt);
-        return Array.isArray(ideas) ? ideas : [];
-      } catch (_) {
-        return [];
-      }
-    }
+  await fs.ensureDir(dataDir);
+  await fs.ensureFile(ideasPath);
+  
+  try {
+    const data = await fs.readJson(ideasPath);
+    return Array.isArray(data) ? data : [];
+  } catch (error) {
+    return [];
   }
-  return [];
 }
 
-module.exports = { getIdeas, dataPath };
+async function saveIdeas(ideas) {
+  await fs.ensureDir(dataDir);
+  await fs.writeJson(ideasPath, ideas, { spaces: 2 });
+}
+
+async function getIdeaById(id) {
+  const ideas = await getIdeas();
+  return ideas.find(idea => idea.id === id);
+}
+
+module.exports = {
+  getIdeas,
+  saveIdeas,
+  getIdeaById,
+  dataDir,
+  ideasPath
+};
