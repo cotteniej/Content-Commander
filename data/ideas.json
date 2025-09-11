@@ -19,5 +19,26 @@
     "description": "Anything good to clone for wakesurfing? MadLab BJJ?",
     "type": "Blog Post",
     "createdAt": "2025-08-22T15:31:22.620Z"
+  },
+  {
+    "id": "1757515061485",
+    "title": "Scraping leads on ag marketing",
+    "description": "another addition to agmarketing.com. scraping and enriching leads, can be paid monthly or something to access these tools",
+    "type": "Other",
+    "createdAt": "2025-09-10T14:37:41.485Z"
+  },
+  {
+    "id": "1757516620640",
+    "title": "more ag website features",
+    "description": "would also be good to create QR codes and all the other random free stuff i try finfind online ",
+    "type": "Other",
+    "createdAt": "2025-09-10T15:03:40.640Z"
+  },
+  {
+    "id": "1757602398139",
+    "title": "Test blank",
+    "description": "this is a test for a blank idea",
+    "type": "Blog Post",
+    "createdAt": "2025-09-11T14:53:18.139Z"
   }
 ]

@@ -25,6 +25,12 @@ program
   .description('List all content ideas')
   .action(require('./src/commands/list'));
 
+  // Search Command
+program
+  .command('search <keyword>') // required argument, not optional
+  .description('Search for content ideas by keyword')
+  .action(require('./src/commands/search'));
+
 // Parse arguments
 program.parse(process.argv);
 
