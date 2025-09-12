@@ -21,6 +21,18 @@ module.exports = async () => {
       name: 'type',
       message: 'What type of content is this?',
       choices: ['Blog Post', 'Social Media', 'Newsletter', 'Video', 'Other']
+    },
+    {
+      type: 'list',
+      name: 'status',
+      message: 'What\'s the current status of this idea?',
+      choices: ['Planning', 'In Progress', 'Draft', 'Published', 'Archived']
+    },
+    {
+      type: 'input',
+      name: 'tags',
+      message: 'Add tags (comma separated):',
+      filter: input => input.split(',').map(tag => tag.trim()).filter(tag => tag)
     }
   ]);
 

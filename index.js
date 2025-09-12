@@ -31,6 +31,15 @@ program
   .description('Search for content ideas by keyword')
   .action(require('./src/commands/search'));
 
+// Filter Command
+program
+  .command('filter')
+  .description('Filter content ideas by type, status, or tag')
+  .option('-t, --type <type>', 'Filter by content type')
+  .option('-s, --status <status>', 'Filter by status')
+  .option('-g, --tag <tag>', 'Filter by tag')
+  .action(require('./src/commands/filter'));
+
 // Parse arguments
 program.parse(process.argv);
 
