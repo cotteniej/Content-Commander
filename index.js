@@ -40,6 +40,16 @@ program
   .option('-g, --tag <tag>', 'Filter by tag')
   .action(require('./src/commands/filter'));
 
+program
+  .command('update <id>')
+  .description('Update a content idea by ID')
+  .action(require('./src/commands/update'));
+
+program
+  .command('delete <id>')
+  .description('Delete a content idea by ID')
+  .action(require('./src/commands/delete'));
+
 // Parse arguments
 program.parse(process.argv);
 
