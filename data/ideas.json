@@ -10,8 +10,14 @@
     "id": "1755875845157",
     "title": "Podcast notes - Mohnish Pabrai",
     "description": "He says the way to go is to \"clone\". So cloning brewery site is good",
-    "type": "Blog Post",
-    "createdAt": "2025-08-22T15:17:25.157Z"
+    "type": "Other",
+    "createdAt": "2025-08-22T15:17:25.157Z",
+    "status": "Planning",
+    "tags": [
+      "directory"
+    ],
+    "dueDate": "2025-10-01",
+    "updatedAt": "2025-09-13T18:26:42.068Z"
   },
   {
     "id": "1755876682620",

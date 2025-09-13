@@ -50,6 +50,11 @@ program
   .description('Delete a content idea by ID')
   .action(require('./src/commands/delete'));
 
+  program
+  .command('calendar')
+  .description('View content ideas organized by due date')
+  .action(require('./src/commands/calendar'));
+
 // Parse arguments
 program.parse(process.argv);
 

@@ -33,6 +33,16 @@ module.exports = async () => {
       name: 'tags',
       message: 'Add tags (comma separated):',
       filter: input => input.split(',').map(tag => tag.trim()).filter(tag => tag)
+    },
+    {
+      type: 'input',
+      name: 'dueDate',
+      message: 'Due date (YYYY-MM-DD):',
+      validate: input => {
+        if (!input) return true; // Optional field
+        const date = new Date(input);
+        return !isNaN(date.getTime()) ? true : 'Please enter a valid date in YYYY-MM-DD format.';
+      }
     }
   ]);
 
