@@ -55,6 +55,11 @@ program
   .description('View content ideas organized by due date')
   .action(require('./src/commands/calendar'));
 
+  program
+  .command('help')
+  .description('Display help information')
+  .action(require('./src/commands/help'));
+
 // Parse arguments
 program.parse(process.argv);
 
