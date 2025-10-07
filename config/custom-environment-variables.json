@@ -1,0 +1,7 @@
+{
+  "apis": {
+    "unsplash": {
+      "accessKey": "UNSPLASH_ACCESS_KEY"
+    }
+  }
+}

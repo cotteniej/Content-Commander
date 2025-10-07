@@ -1,0 +1,18 @@
+{
+  "app": {
+    "name": "Content Commander",
+    "version": "0.3.0"
+  },
+  "user": {
+    "name": ""
+  },
+  "apis": {
+    "unsplash": {
+      "accessKey": ""
+    }
+  },
+  "export": {
+    "defaultFormat": "markdown",
+    "outputDir": "exports"
+  }
+}
