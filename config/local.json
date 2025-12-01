@@ -1,0 +1,14 @@
+{
+  "user": {
+    "name": "Jared"
+  },
+  "apis": {
+    "unsplash": {
+      "accessKey": "TkEfbtefz31rjG6xAaiomcuqTF6VgGtJXS1SjiZMzPE"
+    }
+  },
+  "export": {
+    "defaultFormat": "html",
+    "outputDir": "content-commander exports"
+  }
+}

@@ -1,8 +1,9 @@
 const fs = require('fs-extra');
 const path = require('path');
 const { handleError } = require('./errorHandler');
+const configUtil = require('./config');
 
-const dataDir = path.join(process.cwd(), 'data');
+const dataDir = path.join(process.cwd(), configUtil.get('data.directory', 'data'));
 const ideasPath = path.join(dataDir, 'ideas.json');
 
 async function getIdeas() {

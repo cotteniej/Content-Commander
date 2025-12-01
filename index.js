@@ -60,6 +60,11 @@ program
   .description('Display help information')
   .action(require('./src/commands/help'));
 
+program
+  .command('setup')
+  .description('Configure Content Commander settings')
+  .action(require('./src/commands/setup'));
+
 // Parse arguments
 program.parse(process.argv);
 
