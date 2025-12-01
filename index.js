@@ -65,6 +65,11 @@ program
   .description('Configure Content Commander settings')
   .action(require('./src/commands/setup'));
 
+program
+  .command('images <keyword>')
+  .description('Search for images related to a keyword')
+  .action(require('./src/commands/images'));
+
 // Parse arguments
 program.parse(process.argv);
 
