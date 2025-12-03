@@ -14,5 +14,9 @@
   "export": {
     "defaultFormat": "markdown",
     "outputDir": "exports"
+  },
+  "prompts": {
+  "defaultAudience": "Content creators and business professionals",
+  "defaultTone": "Professional but conversational"
   }
 }
