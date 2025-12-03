@@ -81,6 +81,13 @@ program
   .option('-o, --outline-id <outlineId>', 'Specific outline ID to view')
   .action(require('./src/commands/view-outline'));
 
+  program
+  .command('export <id>')
+  .description('Export a content idea to a file')
+  .option('-f, --format <format>', 'Export format (markdown, html, text)')
+  .option('-o, --outline-id <outlineId>', 'Specific outline ID to use')
+  .action(require('./src/commands/export'));
+
 // Parse arguments
 program.parse(process.argv);
 
