@@ -31,7 +31,32 @@
     "title": "Scraping leads on ag marketing",
     "description": "another addition to agmarketing.com. scraping and enriching leads, can be paid monthly or something to access these tools",
     "type": "Other",
-    "createdAt": "2025-09-10T14:37:41.485Z"
+    "createdAt": "2025-09-10T14:37:41.485Z",
+    "outlines": [
+      {
+        "id": "1764722979096",
+        "title": "Scraping leads on ag marketing",
+        "createdAt": "2025-12-03T00:49:39.096Z",
+        "sections": [
+          {
+            "name": "Introduction",
+            "content": "Introduction to \"Scraping leads on ag marketing\""
+          },
+          {
+            "name": "Main Points",
+            "content": "• Point 1\n• Point 2\n• Point 3"
+          },
+          {
+            "name": "Supporting Details",
+            "content": "Additional information and context"
+          },
+          {
+            "name": "Conclusion",
+            "content": "Summary and next steps"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "1757516620640",

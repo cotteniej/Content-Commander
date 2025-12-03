@@ -75,6 +75,12 @@ program
   .description('Generate an outline for a content idea')
   .action(require('./src/commands/outline'));
 
+program
+  .command('view-outline <id>')
+  .description('View a saved outline for a content idea')
+  .option('-o, --outline-id <outlineId>', 'Specific outline ID to view')
+  .action(require('./src/commands/view-outline'));
+
 // Parse arguments
 program.parse(process.argv);
 
