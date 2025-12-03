@@ -70,6 +70,11 @@ program
   .description('Search for images related to a keyword')
   .action(require('./src/commands/images'));
 
+program
+  .command('outline <id>')
+  .description('Generate an outline for a content idea')
+  .action(require('./src/commands/outline'));
+
 // Parse arguments
 program.parse(process.argv);
 
