@@ -37,6 +37,9 @@ module.exports = async () => {
     // Update configuration
     await configUtil.update('user.name', answers.userName);
     await configUtil.update('apis.unsplash.accessKey', answers.unsplashKey);
+    if (answers.unsplashKey) {
+  await updateEnvFile('UNSPLASH_ACCESS_KEY', answers.unsplashKey);
+}
     await configUtil.update('export.defaultFormat', answers.exportFormat);
     await configUtil.update('export.outputDir', answers.exportDir);
     
@@ -52,3 +55,38 @@ module.exports = async () => {
     console.error(chalk.red('Error updating configuration:'), error.message);
   }
 };
+
+async function updateEnvFile(key, value) {
+  try {
+    const fs = require('fs-extra');
+    const path = require('path');
+    const dotenv = require('dotenv');
+    
+    // Path to .env file
+    const envPath = path.resolve(process.cwd(), '.env');
+    
+    // Create .env file if it doesn't exist
+    if (!await fs.pathExists(envPath)) {
+      await fs.writeFile(envPath, '', 'utf8');
+    }
+    
+    // Read current .env file
+    const envContent = await fs.readFile(envPath, 'utf8');
+    const envVars = dotenv.parse(envContent);
+    
+    // Update the variable
+    envVars[key] = value;
+    
+    // Convert back to .env format
+    const newEnvContent = Object.entries(envVars)
+      .map(([key, val]) => `${key}=${val}`)
+      .join('\n');
+    
+    // Write back to file
+    await fs.writeFile(envPath, newEnvContent, 'utf8');
+    return true;
+  } catch (error) {
+    console.error('Error updating .env file:', error.message);
+    return false;
+  }
+}

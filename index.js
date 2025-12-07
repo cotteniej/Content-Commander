@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+require('./src/env');
+
 const { program } = require('commander');
 const chalk = require('chalk');
 

@@ -7,7 +7,9 @@ const withRetry = require('./apiRetry');
 class UnsplashService {
   constructor() {
     this.baseUrl = 'https://api.unsplash.com';
-    this.accessKey = configUtil.get('apis.unsplash.accessKey', '');
+    this.accessKey = 
+  require('../env').unsplashAccessKey() || 
+  configUtil.get('apis.unsplash.accessKey', '');
   }
 
   async searchPhotos(query, page = 1, perPage = 5) {

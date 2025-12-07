@@ -17,6 +17,7 @@
     "chalk": "^4.1.2",
     "commander": "^13.1.0",
     "config": "^3.3.12",
+    "dotenv": "^17.2.3",
     "fs-extra": "^11.3.1",
     "inquirer": "^8.2.5"
   }
